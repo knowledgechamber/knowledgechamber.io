@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Home Page</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/style.css">
 </head>
 <body>
     <div class="container">
@@ -15,62 +15,82 @@
         <p>.</p>
         <div class="links">
             <a href="https://www.amazon.in/">
-                <img src="/Assets/amazon.png" alt="WhatsApp">
+                <img src="amazon.png" alt="WhatsApp">
                 Amazon
             </a>
             
             <p class="link2">
               <a href="https://www.behance.net">
-                <img src="/Assets/behance.png" alt="Behance">
+                <img src="behance.png" alt="Behance">
                 Behance
             </a>
             &nbsp;&nbsp;&nbsp;
 
             <a href="https://dribbble.com/">
-              <img src="/Assets/dribble.png" alt="Behance">
+              <img src="dribble.png" alt="Behance">
               Dribble
           </a>
             </p>
 
             <p class="link2">
               <a href="https://www.whatsapp.com">
-                <img src="/Assets/whatsapp.png" alt="WhatsApp">
+                <img src="whatsapp.png" alt="WhatsApp">
                 WhatsApp
             </a>
             &nbsp;&nbsp;&nbsp;
   
             <a href="https://knowledgechamber.github.io/rajapandian/">
-              <img src="/Assets/portfolio_281089.png" alt="Github">
+              <img src="portfolio_281089.png" alt="Github">
               Portfolio
           </a>
           &nbsp;&nbsp;&nbsp;
   
           <a href="https://github.com">
-            <img src="/Assets/git.png" alt="Github">
+            <img src="git.png" alt="Github">
             Github
         </a>
             </p>
 
       <p class="link2">
         <a href="https://www.linkedin.com">
-          <img src="/Assets/linked.png" alt="LinkedIn">
+          <img src="linked.png" alt="LinkedIn">
           LinkedIn
       </a>
       &nbsp;&nbsp;&nbsp;
 
       <a href="https://www.facebook.com">
-        <img src="/Assets/fb.png" alt="Facebook">
+        <img src="fb.png" alt="Facebook">
         Facebook
     </a>
       </p>
 
     <a href="https://www.instagram.com">
-        <img src="/Assets/insta.png" alt="Instagram">
+        <img src="insta.png" alt="Instagram">
         Instagram
     </a>
         </div>
         <div class="clock" id="clock"></div>
     </div>
-    <script src="/index.js"></script>
+    <script>
+      function updateClock() {
+    const now = new Date();
+    const hours = now.getHours();
+    let greeting;
+    if (hours < 12) {
+        greeting = "Good morning";
+    } else if (hours < 18) {
+        greeting = "Good afternoon";
+    } else {
+        greeting = "Good evening";
+    }
+    document.getElementById('greeting').textContent = greeting;
+    const hoursString = hours.toString().padStart(2, '0');
+    const minutes = now.getMinutes().toString().padStart(2, '0');
+    const seconds = now.getSeconds().toString().padStart(2, '0');
+    document.getElementById('clock').textContent = `${hoursString}:${minutes}:${seconds}`;
+}
+setInterval(updateClock, 1000);
+updateClock();
+    </script>
 </body>
 </html>
