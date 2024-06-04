@@ -1,5 +1,5 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     margin: 0;
     padding: 0;
     display: flex;
@@ -17,13 +17,19 @@ body {
 h1 {
     margin-bottom: 20px;
     color: white;
-    font-family: aptos;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+h3 {
+    margin-bottom: 20px;
+    color: white;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 .greeting {
     font-size: 35px;
     margin-bottom: 20px;
     color: white;
-    font-family: aptos;
+    font-weight: bold;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 .links {
     display: grid;
@@ -56,7 +62,7 @@ h1 {
 }
 .clock {
     font-size: 30px;
-    font-family: Aptos;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     position: absolute;
     top: 50px;
     right: 20px;
